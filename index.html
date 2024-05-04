@@ -3,20 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Script</title>
+    <title>DarkCheatClient Official Website</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .discord-button, .get-script-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #7289da;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .discord-button:hover, .get-script-button:hover {
+            background-color: #677bc4;
+        }
+        .icon {
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
-    <div>
-        <p>print("TestScript.lua")</p>
+    <div class="container">
+        <h1>Welcome To the DarkCheatClient Official Website!</h1>
+        <p>We are glad to see you on our website! The correct version and additions, scripts and much more will be described here. Join our community on Discord Server!</p>
+        <a href="https://discord.com" class="discord-button">
+            <img src="discord_icon.png" alt="Discord Icon" class="icon">
+            Join To Discord Server
+        </a>
+        <button class="get-script-button" onclick="copyText()"> 
+            <img src="console_icon.png" alt="Console Icon" class="icon">
+            Get Script
+        </button>
     </div>
+
+    <script>
+        function copyText() {
+            var text = "TestLua";
+            navigator.clipboard.writeText(text)
+                .then(function() {
+                    alert("Free Version Of Script Is Successfully Copied To Clipboard");
+                })
+                .catch(function() {
+                    console.error("Failed to copy text to clipboard");
+                });
+        }
+    </script>
 </body>
 </html>
